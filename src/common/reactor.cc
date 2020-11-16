@@ -114,7 +114,7 @@ public:
     poller.rearmFd(fd, Flags<Polling::NotifyOn>(interest), pollTag, mode);
   }
 
-  void removeFd(const Reactor::Key& key, Fd fd) override {
+  void removeFd(const Reactor::Key&, Fd fd) override {
     poller.removeFd(fd);
   }
 
